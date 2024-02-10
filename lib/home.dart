@@ -196,7 +196,8 @@ class _HomeState extends State<Home> {
       } catch (e) {
         generateErrorDialog(e.toString());
       }
-    } else {
+    }
+    if(model == "Open AI") {
       try {
         final baseLangResp = await http.post(
           Uri.parse("https://api.openai.com/v1/chat/completions"),

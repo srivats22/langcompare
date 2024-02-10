@@ -67,7 +67,7 @@ class _MobileCompareState extends State<MobileCompare> {
         generateErrorDialog(e.toString());
       }
     }
-    else{
+    if(widget.model == "Open AI"){
       try{
         final baseLangResp = await http.post(
           Uri.parse('https://api.openai.com/v1/chat/completions'),
